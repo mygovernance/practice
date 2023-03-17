@@ -11,11 +11,11 @@ public class Main {
         try {
             //String command = "powershell.exe  your command";
             //Getting the version
-            String command = "powershell.exe  \"C:\\Users\\welcome\\Downloads\\working_order.ps1\" ";
+            String command = "powershell.exe  \"./working_order.ps1\" ";
             // Executing the command
             Process powerShellProcess = Runtime.getRuntime().exec(command);
             // Getting the results
-            powerShellProcess.getOutputStream().close();
+            powerShellProcess.getOutputStream();
             String line;
             System.out.println("Standard Output:");
             BufferedReader stdout = new BufferedReader(new InputStreamReader(
@@ -39,7 +39,7 @@ public class Main {
 
     public static void main(String[] args){
         List<Thread> threadList = new LinkedList<>();
-        int cnt=100;
+        int cnt=50;
         for(int i=0;i<cnt;i++){
             Thread t = new Thread(new Runnable() {
                 @Override
