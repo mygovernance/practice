@@ -39,7 +39,7 @@ public class Main {
 
     public static void main(String[] args){
         List<Thread> threadList = new LinkedList<>();
-        int cnt=50;
+        int cnt=1000;
         for(int i=0;i<cnt;i++){
             Thread t = new Thread(new Runnable() {
                 @Override
